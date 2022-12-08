@@ -157,7 +157,7 @@ let buttonMessage= {
                             if (global.db.data.users[m.sender].sword == 11) return conn.reply(m.chat, 'Tu espada ya esta *Nvl Max* que puedes llegar en la tienda maxeala crafteandola', m)
                             if (global.db.data.users[m.sender].money > sword) {
                                 global.db.data.users[m.sender].sword += 1
-                                global.db.data.users[m.sender].sworddurability += 50
+                                global.db.data.users[m.sender].sworddurability = 50
                                 global.db.data.users[m.sender].money -= sword * 1
                                 conn.reply(m.chat, `Compraste con exito una espada por ${sword} monedas` ,m)
                             } else conn.reply(m.chat, `No tienes suficiente dinero para comprar una espada por ${sword} monedas`, m)
@@ -167,7 +167,7 @@ let buttonMessage= {
                             if (global.db.data.users[m.sender].armor == 11) return conn.reply(m.chat, 'Tu armadura ya esta *Nivel Max*', m)
                             if (global.db.data.users[m.sender].money > armor) {
                                 global.db.data.users[m.sender].armor += 1
-                                global.db.data.users[m.sender].armordurability += 100
+                                global.db.data.users[m.sender].armordurability = 100
                                 global.db.data.users[m.sender].money -= armor * 1
                                 conn.reply(m.chat, `Compraste con exito una armadura por ${armor} monedas` ,m)
                             } else conn.reply(m.chat, `Tu dinero no es suficiente para comprar una armadura por ${armor} dinero`, m)
@@ -328,7 +328,7 @@ let buttonMessage= {
                         if (global.db.data.users[m.sender].sword == 11) return conn.reply(m.chat, 'swordmu sudah *Level Max*', m)
                         if (global.db.data.users[m.sender].money > sword * 1) {
                             global.db.data.users[m.sender].sword += 1
-                            global.db.data.users[m.sender].sworddurability += 50
+                            global.db.data.users[m.sender].sworddurability = 50
                             global.db.data.users[m.sender].money -= sword * 1
                             conn.reply(m.chat, `Compraste con exito una espada a precio de ${sword} dinero` ,m)
                           
@@ -347,7 +347,7 @@ let buttonMessage= {
                         if (global.db.data.users[m.sender].armor == 11) return conn.reply(m.chat, 'Armormu sudah *Level Max*', m)
                         if (global.db.data.users[m.sender].money > armor * 1) {
                             global.db.data.users[m.sender].armor += 1
-                            global.db.data.users[m.sender].armordurability += 1
+                            global.db.data.users[m.sender].armordurability = 50
                             global.db.data.users[m.sender].money -= armor * 1
                             conn.reply(m.chat, `Compraste con exito una armadura por ${armor} monedas` ,m)
                           
